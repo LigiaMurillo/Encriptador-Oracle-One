@@ -4,9 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <title>Encriptador</title>
-    <link rel="stylesheet" href="reset.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="index.css">
-    
+
 
 </head>
 
@@ -14,24 +15,46 @@
 
     <header>
 
-        <img src="imagenes/Logo-1.png" alt="Logo Alura">
+        <img id="logo" src="imagenes/Logo-1.png" alt="Logo Alura">
 
     </header>
 
     <main>
-        <div class="texto">
-            <textarea id="campoTexto" placeholder="Escribe algo aquí..."></textarea>
-            <button id="botonEncriptar">Encriptar</button><button id="botonDesencriptar">Desencriptar</button>
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-lg-8">
+                    <div class="form-group">
+                        <textarea id="campoTexto" placeholder="Escribe algo aquí..."></textarea>
+                        <div class="container-2">
+                            <span class="circle">&#33;</span>
+                            <p id="alerta">Solo letras minúsculas y sin acentos</p>
+                        </div>
+                    </div>
 
-        </div>
-        <div class="texto-encriptado">
-            <textarea id="campoTextoEncriptado" readonly></textarea>
-            <img class="imagen" src="imagenes/Muñeco.png" alt="Muñeco con lupa">
-            <p>Ningun Elemto fue encontrado</p>
-            <p>Ingrese el texto que desee encriptar o desencriptar</p>
-            <button id="botonCopiar">Copiar</button>
+                    <div class="row">
+                        <div class="col-12 col-lg-6 d-flex justify-content-center">
+                            <button id="botonEncriptar">Encriptar</button>
+                        </div>
+                        <div class="col-12 col-lg-6 d-flex justify-content-center">
+                            <button id="botonDesencriptar">Desencriptar</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-lg-4 col-texto-encriptado">
+                    <textarea id="campoTextoEncriptado" readonly></textarea>
+                    <img id="imagenMuñeco" class="imagen img-fluid" src="imagenes/Muñeco.png" alt="Muñeco con lupa">
+                    <p id="mensaje1">Ningun Elemento fue encontrado</p>
+                    <p id="mensaje2">Ingrese el texto que desee encriptar o desencriptar</p>
+                    <button id="botonCopiar">Copiar</button>
+
+                </div>
+            </div>
         </div>
 
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+            crossorigin="anonymous"></script>
         <script src='main.js'></script>
 
     </main>
